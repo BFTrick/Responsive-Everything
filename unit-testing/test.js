@@ -1,18 +1,16 @@
-//this document contains all the tests for Responsive Everything.
+/*this document contains all the tests for Responsive Everything.
 
-/* unescaped patterns 
+//---------------------
+// unescaped pattern 
+//---------------------
+(<[^>]+?)((?:height|width)[=:]["']?\d+["';]\s?)(.*?>)
 
-img attributes
-(<img [^>]+?)((?:height|width)=["']\d*["']\s?)(.*?/?>)
-
-div style properties
-(<div (?:[^>])*?style(?:\s)*?=(?:\s)*?(["\'])(?:[\s\w:;])*?)([(width(?:\s)|(height(?:\s)]*?:*?(?:\s)*?(?:\d)+(?:px|em|%);?)([(width(?:\s)|(height(?:\s)]*?:*?(?:\s)*?(?:\d)+(?:px|em|%);?)([\s\w:;])*?\2
 */
 
 
-var imgAttrPattGetOpeningImageTag = "(<img [^>]+?)";
-var imgAttrPattGetHeightOrWidthAttribute = "((?:height|width)=[\"']\\d*[\"']\\s?)";
-var imgAttrPattGetClosingImageTag = "(.*?/?>)";
+var imgAttrPattGetOpeningImageTag = "(<[^>]+?)";
+var imgAttrPattGetHeightOrWidthAttribute = "((?:height|width)[=:][\"']?\d+[\"';]\s?)";
+var imgAttrPattGetClosingImageTag = "(.*?>)";
 
 var imgAttrPattConcatenated = imgAttrPattGetOpeningImageTag+imgAttrPattGetHeightOrWidthAttribute+imgAttrPattGetClosingImageTag;
 
